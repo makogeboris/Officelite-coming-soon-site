@@ -1,0 +1,7 @@
+@use "../settings/variables" as *;
+@use "../tools/mixins" as *;
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: $color-almost-white;
+}
