@@ -1,2 +1,8 @@
 @use "../settings/variables" as *;
 @use "../tools/mixins" as *;
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

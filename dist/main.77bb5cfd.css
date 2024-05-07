@@ -3,6 +3,10 @@ body {
   background-color: rgb(250, 250, 250);
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -109,6 +113,271 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 120%;
+  color: rgb(51, 57, 80);
+  margin-bottom: 1.5rem;
+}
+@media only screen and (min-width: 61.125rem) {
+  .heading {
+    font-size: 3.5rem;
+    line-height: 114%;
+  }
+}
+
+.paragraph {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 162%;
+  color: rgb(116, 123, 149);
+  margin-bottom: 1.5rem;
+}
+@media only screen and (min-width: 61.125rem) {
+  .paragraph {
+    font-size: 1.125rem;
+    line-height: 156%;
+    margin-bottom: 2rem;
+  }
+}
+
+.card__heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 120%;
+  color: rgb(51, 57, 80);
+  margin-bottom: 8px;
+}
+@media only screen and (min-width: 37.5rem) {
+  .card__heading {
+    margin-bottom: 4px;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .card__heading {
+    margin-bottom: 8px;
+  }
+}
+
+.card__paragraph {
+  margin-bottom: 16px;
+}
+.card__paragraph--dark {
+  color: rgb(51, 57, 80);
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 37.5rem) {
+  .card__paragraph--dark {
+    margin-bottom: 1.5rem;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .card__paragraph--dark {
+    margin-bottom: 0;
+  }
+}
+.card__paragraph--plan {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: rgb(51, 57, 80);
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 37.5rem) {
+  .card__paragraph--plan {
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .card__paragraph--plan {
+    margin-bottom: 40px;
+  }
+}
+
+.text-white {
+  color: rgb(255, 255, 255);
+  mix-blend-mode: normal;
+}
+
+.btn, .btn:link, .btn:visited {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 156%;
+  color: rgb(255, 255, 255);
+  padding: 0.875em 2.5625em;
+  background: rgb(81, 117, 255);
+  box-shadow: 0 1.5625rem 1.5625rem -0.625rem rgba(63, 91, 194, 0.247159);
+  border-radius: 1.75rem;
+  transition: all 0.7s;
+}
+.btn:hover, .btn:active {
+  background: rgb(180, 196, 255);
+}
+.btn:focus-visible {
+  outline: 3px solid rgb(51, 57, 80);
+}
+.btn--light, .btn--light:link, .btn--light:visited {
+  color: rgb(81, 117, 255);
+  background: rgb(180, 196, 255);
+}
+.btn--light:hover, .btn--light:active {
+  mix-blend-mode: normal;
+  opacity: 0.7;
+}
+.btn--white, .btn--white:link, .btn--white:visited {
+  color: rgb(81, 117, 255);
+  background: rgb(255, 255, 255);
+}
+.btn--white:hover, .btn--white:active {
+  mix-blend-mode: normal;
+  opacity: 0.7;
+}
+
+.section-pricing {
+  display: grid;
+  place-items: center;
+}
+.section-pricing .card-container {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+}
+.section-pricing .card-container .card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+  border-radius: 13px;
+  text-align: center;
+  gap: 56px;
+  padding: 40px 53px;
+  width: 100%;
+}
+.section-pricing .card-container .card--white {
+  background-color: rgb(250, 250, 250);
+}
+.section-pricing .card-container .card--blue {
+  background-color: rgb(81, 117, 255);
+}
+.section-pricing .card-container .card__text2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 37.5rem) {
+  .section-pricing .card-container .card__text2 {
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .section-pricing .card-container .card__text2 {
+    align-items: center;
+    text-align: center;
+  }
+}
+.section-pricing .card-container .card .hide {
+  display: none;
+}
+@media only screen and (min-width: 37.5rem) {
+  .section-pricing .card-container {
+    gap: 1.5rem;
+  }
+  .section-pricing .card-container .card {
+    display: flex;
+    flex-direction: row;
+    gap: 117px;
+    text-align: left;
+    padding: 48px 100px 48px 48px;
+  }
+  .section-pricing .card-container .card .hide {
+    display: block;
+  }
+  .section-pricing .card-container .card .show {
+    display: none;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .section-pricing .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  .section-pricing .card-container .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 56px;
+    padding: 40px 64px;
+  }
+  .section-pricing .card-container .card .hide {
+    display: none;
+  }
+  .section-pricing .card-container .card .show {
+    display: inline-block;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  margin-bottom: 80px;
+}
+@media only screen and (min-width: 37.5rem) {
+  .header {
+    justify-content: flex-start;
+    padding-top: 72px;
+    padding-left: 40px;
+    margin-bottom: 104px;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .header {
+    padding-top: 81px;
+    padding-left: 165px;
+    margin-bottom: 174px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+  padding: 0 1.5rem;
+  gap: 63px;
+}
+@media only screen and (min-width: 37.5rem) {
+  .content {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 140px;
+    padding: 0;
+  }
+  .content__img-box {
+    width: 37%;
+  }
+  .content__text-box {
+    width: 45%;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .content {
+    margin-bottom: 184px;
+    gap: 95px;
+  }
+  .content__img-box {
+    width: 33%;
+  }
+  .content__text-box {
+    width: 37.5%;
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

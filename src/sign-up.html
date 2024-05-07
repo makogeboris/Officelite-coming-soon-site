@@ -21,18 +21,84 @@
     <title>Frontend Mentor | Officelite coming soon site</title>
   </head>
   <body>
-    <a href="index.html">home</a>
+    <header class="header-signup">
+      <a href="index.html"
+        ><img
+          class="header-signup__logo"
+          src="./assets/shared/logo.svg"
+          alt="Officelite's logo"
+      /></a>
+    </header>
 
-    Work smarter. Save time. Easily manage your projects. Get on the list and
-    receive in-app perks available only to early subscribers. We are moving into
-    final development and getting ready for official launch soon.
+    <main>
+      <div class="wrapper">
+        <div>
+          <div class="text">
+            <h1 class="heading">Work smarter. Save time.</h1>
+            <p class="paragraph">
+              Easily manage your projects. Get on the list and receive in-app
+              perks available only to early subscribers. We are moving into
+              final development and getting ready for official launch soon.
+            </p>
+          </div>
+
+          <div class="countdown-box">
+            <p>Coming 4 Nov 2020</p>
+            <div class="countdown">
+              <div>
+                <p>47</p>
+                <p>Days</p>
+              </div>
+              <div>
+                <p>07</p>
+                <p>Hours</p>
+              </div>
+              <div>
+                <p>56</p>
+                <p>Min</p>
+              </div>
+              <div>
+                <p>14</p>
+                <p>Sec</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form>
+            <input type="text" name="name" id="name" placeholder="Name" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+            />
+            <select name="plan" id="plan">
+              <option value="basic">Basic Pack <span>Free</span></option>
+              <option value="basic">Pro Pack <span>$9.99</span></option>
+              <option value="basic">Ultimate Pack <span>$19.99</span></option>
+            </select>
+            <input
+              type="number"
+              name="number"
+              id="number"
+              placeholder="Phone Number"
+            />
+            <input
+              type="text"
+              name="company"
+              id="company"
+              placeholder="Company"
+            />
+            <button type="submit">Get on the list</button>
+          </form>
+        </div>
+      </div>
+    </main>
 
     <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-    Coming 4 Nov 2020
 
     <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-    47 Days 07 Hours 56 Min 14 Sec Name Email Address Basic Pack Free Basic Pack
-    Free Pro Pack $9.99 Ultimate Pack $19.99 Phone Number Company Get on the
-    list
   </body>
 </html>

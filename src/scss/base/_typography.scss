@@ -1,2 +1,97 @@
 @use "../settings/variables" as *;
 @use "../tools/mixins" as *;
+
+.heading {
+  font-size: $fs-sm-h1;
+  font-weight: $fw-bold;
+  line-height: $lh-sm-h1;
+  color: $color-dark-blue;
+  margin-bottom: 1.5rem;
+
+  @include responsive(desktop) {
+    font-size: $fs-lg-h1;
+    line-height: $lh-lg-h1;
+  }
+}
+
+.paragraph {
+  font-size: $fs-md-p;
+  font-weight: $fw-medium;
+  line-height: $lh-md-p;
+  color: $color-grey;
+  margin-bottom: 1.5rem;
+
+  @include responsive(desktop) {
+    font-size: $fs-lg-p;
+    line-height: $lh-lg-p;
+    margin-bottom: 2rem;
+  }
+}
+
+.card__heading {
+  font-size: $fs-lg-h1;
+  font-weight: $fw-bold;
+  line-height: $lh-sm-h1;
+  color: $color-dark-blue;
+  margin-bottom: 8px;
+
+  @include responsive(tablet) {
+    margin-bottom: 4px;
+  }
+
+  @include responsive(desktop) {
+    margin-bottom: 8px;
+  }
+}
+
+.card__paragraph {
+  margin-bottom: 16px;
+
+  &--dark {
+    color: $color-dark-blue;
+    margin-bottom: 0;
+
+    @include responsive(tablet) {
+      margin-bottom: 1.5rem;
+    }
+
+    @include responsive(desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--plan {
+    font-size: $fs-md;
+    font-weight: $fw-bold;
+    line-height: $lh-md;
+    color: $color-dark-blue;
+    margin-bottom: 40px;
+
+    @include responsive(tablet) {
+      margin-bottom: 1rem;
+    }
+
+    @include responsive(desktop) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.text-white {
+  color: $color-white;
+  mix-blend-mode: normal;
+}
+
+// .card__text2 {
+//   .mb {
+//     margin-bottom: 0;
+
+//     @include responsive(tablet) {
+//       margin-bottom: 1rem;
+//     }
+
+//     @include responsive(desktop) {
+//       margin-bottom: 0;
+//     }
+//   }
+// }

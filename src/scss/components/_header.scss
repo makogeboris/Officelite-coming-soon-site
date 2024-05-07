@@ -1,0 +1,29 @@
+@use "../settings/variables" as *;
+@use "../tools/mixins" as *;
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  margin-bottom: 80px;
+
+  @include responsive(tablet) {
+    justify-content: flex-start;
+    padding-top: 72px;
+    padding-left: 40px;
+    margin-bottom: 104px;
+  }
+
+  @include responsive(desktop) {
+    padding-top: 81px;
+    padding-left: 165px;
+    margin-bottom: 174px;
+  }
+
+  //   &::before {
+  //     content: url("/assets/home/bg-pattern-header.svg");
+  //     position: absolute;
+  //     max-width: 1122px;
+  //     background-size: 100% auto;
+  //   }
+}
