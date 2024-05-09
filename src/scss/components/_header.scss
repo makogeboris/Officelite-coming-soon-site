@@ -1,29 +1,34 @@
 @use "../settings/variables" as *;
 @use "../tools/mixins" as *;
+@use "../tools/functions" as *;
 
 .header {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
-  margin-bottom: 80px;
+  padding-top: rem(50px);
+  margin-bottom: rem(80px);
 
   @include responsive(tablet) {
     justify-content: flex-start;
-    padding-top: 72px;
-    padding-left: 40px;
-    margin-bottom: 104px;
+    padding-top: rem(72px);
+    padding-left: rem(40px);
+    margin-bottom: rem(104px);
+  }
+
+  @include responsive(desktop-md) {
+    padding-left: rem(165px);
   }
 
   @include responsive(desktop) {
-    padding-top: 81px;
-    padding-left: 165px;
-    margin-bottom: 174px;
+    padding-top: rem(81px);
+    margin-bottom: rem(102px);
   }
+}
 
-  //   &::before {
-  //     content: url("/assets/home/bg-pattern-header.svg");
-  //     position: absolute;
-  //     max-width: 1122px;
-  //     background-size: 100% auto;
-  //   }
+.header-signup {
+  margin-bottom: 0;
+
+  @include responsive(desktop) {
+    padding-left: rem(165px);
+  }
 }

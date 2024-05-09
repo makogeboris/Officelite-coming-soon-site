@@ -1,8 +1,54 @@
 @use "../settings/variables" as *;
 @use "../tools/mixins" as *;
+@use "../tools/functions" as *;
 
 .footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: $color-very-dark-blue;
+  background-image: url("/assets/home/bg-pattern-footer.svg");
+  background-position: top;
+
+  padding: rem(894px) rem(24px) rem(100px);
+
+  @include responsive(tablet) {
+    padding: rem(598px) rem(160px) rem(100px);
+    background-position: center 220%;
+  }
+
+  @include responsive(desktop-md) {
+    flex-direction: row;
+    gap: rem(491px);
+  }
+
+  @include responsive(desktop) {
+    padding: rem(336px) rem(165px) rem(90px);
+    background-position: right -100%;
+  }
+}
+
+.footer-signup {
+  height: rem(320px);
+  background-color: $color-very-dark-blue;
+  background-image: url("/assets/home/bg-pattern-footer.svg");
+  background-position: center;
+
+  @include responsive(tablet) {
+    height: rem(380px);
+  }
+
+  @include responsive(desktop-md) {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: rem(420px);
+    z-index: -1;
+    height: 100%;
+    background-image: url("/assets/sign-up/bg-pattern-side.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

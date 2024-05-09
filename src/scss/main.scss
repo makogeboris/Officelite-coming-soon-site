@@ -2,12 +2,12 @@
 @use "base/base";
 @use "base/reset";
 @use "base/typography";
-@use "base/utilities";
 
 @use "components/buttons";
 @use "components/countdown";
+@use "components/footer";
 @use "components/form";
-@use "components/grid";
+@use "components/cards";
 @use "components/header";
 @use "pages/home";
 @use "pages/sign-up";

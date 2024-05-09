@@ -1,2 +1,8 @@
 @use "../settings/variables" as *;
-@use "../tools/mixins" as *;
+
+@use "sass:math";
+
+// Converts px to rem
+@function rem($pxValue) {
+  @return math.div($pxValue, 16px) * 1rem;
+}

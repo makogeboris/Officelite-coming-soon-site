@@ -1,2 +1,100 @@
 @use "../settings/variables" as *;
 @use "../tools/mixins" as *;
+@use "../tools/functions" as *;
+
+.form {
+  background: $color-white;
+  box-shadow: 0 rem(50px) rem(50px) rem(-25px) rgba(75, 92, 154, 0.247159);
+  border-radius: rem(13px);
+  padding: 1.5rem;
+  max-width: rem(445px);
+  width: 100%;
+  margin-bottom: rem(-230px);
+  overflow: visible;
+
+  @include responsive(tablet) {
+    padding: rem(40px) rem(42px) rem(51px);
+    margin-bottom: rem(-260px);
+  }
+
+  @include responsive(desktop-md) {
+    margin-bottom: 0;
+  }
+
+  &__group:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  &__input {
+    font-weight: $fw-medium;
+    font-size: $fs-md-p;
+    line-height: 175%;
+    color: $color-dark-blue;
+    padding: 0 1rem 1rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    transition: all 0.5s;
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $color-blue;
+    }
+
+    &:focus:invalid {
+      border-bottom: 2px solid $color-light-red;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey;
+    }
+
+    &:hover,
+    &:active {
+      border-color: $color-blue;
+    }
+
+    &::placeholder {
+      font-weight: $fw-medium;
+      font-size: $fs-md-p;
+      line-height: 175%;
+      color: $color-grey;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &--select {
+      padding: rem(2px) rem(16px) rem(22px) rem(12px);
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("/assets/sign-up/icon-arrow-down.svg");
+      background-repeat: no-repeat;
+      background-position: 95% 33%;
+    }
+
+    &--option {
+      font-weight: $fw-bold;
+    }
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

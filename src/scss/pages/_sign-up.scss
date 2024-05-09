@@ -1,2 +1,48 @@
 @use "../settings/variables" as *;
 @use "../tools/mixins" as *;
+@use "../tools/functions" as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(80px) rem(24px) 0;
+
+  @include responsive(desktop) {
+    padding-top: rem(104px);
+  }
+
+  @include responsive(desktop-md) {
+    flex-direction: row;
+    justify-content: center;
+    gap: rem(125px);
+    padding-bottom: rem(280px);
+    padding-top: rem(154px);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: rem(572px);
+
+    @include responsive(desktop) {
+      max-width: rem(770px);
+    }
+
+    @include responsive(desktop-md) {
+      align-items: flex-start;
+      max-width: rem(540px);
+
+      &--text-box {
+        text-align: center;
+
+        @include responsive(desktop) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

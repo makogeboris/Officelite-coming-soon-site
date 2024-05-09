@@ -1,15 +1,21 @@
 @use "../settings/variables" as *;
 @use "../tools/mixins" as *;
+@use "../tools/functions" as *;
 
 body {
   font-family: "Kumbh Sans", sans-serif;
   background-color: $color-almost-white;
-  // background-image: url("/assets/home/bg-pattern-header.svg");
-  // background-repeat: no-repeat;
-  // background-position: 80% 20%;
-  // background-size: 100% auto;
-}
+  background-image: url("/assets/home/bg-pattern-header.svg");
+  background-repeat: no-repeat;
+  background-position: left -4.5%;
+  background-size: 100% auto;
 
-a {
-  text-decoration: none;
+  @include responsive(tablet) {
+    background-position: rem(373px) -15%;
+  }
+
+  @include responsive(desktop) {
+    background-position: rem(656px) -66%;
+    background-size: inherit;
+  }
 }

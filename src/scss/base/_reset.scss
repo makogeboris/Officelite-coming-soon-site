@@ -1,5 +1,6 @@
 @use "../settings/variables" as *;
 @use "../tools/mixins" as *;
+@use "../tools/functions" as *;
 
 /* Box sizing rules */
 *,
@@ -83,6 +84,10 @@ h4 {
 a:not([class]) {
   text-decoration-skip-ink: auto;
   color: currentColor;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Make images easier to work with */

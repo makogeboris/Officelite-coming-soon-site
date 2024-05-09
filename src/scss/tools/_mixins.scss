@@ -1,17 +1,23 @@
 @use "../settings/variables" as *;
+@use "../tools/functions" as *;
 
 // MEDIA QUERY MANAGER
-
 @mixin responsive($breakpoint) {
   @if $breakpoint == tablet {
-    @media only screen and (min-width: 37.5rem) {
+    @media only screen and (min-width: rem(745px)) {
       @content;
-    } //600px
+    }
   }
 
   @if $breakpoint == desktop {
-    @media only screen and (min-width: 61.125rem) {
+    @media only screen and (min-width: rem(978px)) {
       @content;
-    } //978px
+    }
+  }
+
+  @if $breakpoint == desktop-md {
+    @media only screen and (min-width: rem(1230px)) {
+      @content;
+    }
   }
 }

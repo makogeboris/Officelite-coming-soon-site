@@ -1,0 +1,129 @@
+@use "../settings/variables" as *;
+@use "../tools/mixins" as *;
+@use "../tools/functions" as *;
+
+.section-pricing {
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  padding: 0 rem(24px);
+
+  margin-bottom: rem(-790px);
+  overflow: visible;
+
+  @include responsive(tablet) {
+    padding: 0 rem(40px);
+    margin-bottom: rem(-490px);
+  }
+
+  @include responsive(desktop) {
+    margin-bottom: rem(-245px);
+  }
+
+  .card-container {
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 rem(50px) rem(50px) rem(-25px) rgba(75, 92, 154, 0.247159);
+      border-radius: rem(13px);
+      text-align: center;
+      gap: rem(56px);
+      padding: rem(40px) rem(53px);
+      max-width: rem(350px);
+      width: 100%;
+      height: -webkit-fill-available;
+
+      &--white {
+        background-color: $color-white;
+      }
+
+      &--blue {
+        background-color: $color-blue;
+        background-image: url("/assets/home/bg-pattern-pricing.svg");
+        background-position: center bottom;
+
+        @include responsive(tablet) {
+          background-position: 520%;
+        }
+
+        @include responsive(desktop) {
+          background-position: center bottom;
+        }
+      }
+
+      &__text2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include responsive(tablet) {
+          text-align: left;
+          align-items: flex-start;
+          justify-content: center;
+        }
+
+        @include responsive(desktop-md) {
+          align-items: center;
+          text-align: center;
+        }
+
+        @include responsive(desktop) {
+        }
+      }
+
+      .hide {
+        display: none;
+      }
+    }
+
+    @include responsive(tablet) {
+      gap: 1.5rem;
+
+      .card {
+        display: flex;
+        flex-direction: row;
+        gap: rem(117px);
+        text-align: left;
+        padding: rem(48px) rem(100px) rem(48px) rem(48px);
+        max-width: rem(689px);
+
+        .hide {
+          display: inline-block;
+        }
+
+        .show {
+          display: none;
+        }
+      }
+    }
+
+    @include responsive(desktop-md) {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: rem(30px);
+
+      .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: rem(56px);
+        padding: rem(40px) rem(64px);
+        max-width: rem(350px);
+
+        .hide {
+          display: none;
+        }
+
+        .show {
+          display: inline-block;
+        }
+      }
+    }
+
+    @include responsive(desktop) {
+    }
+  }
+}

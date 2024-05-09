@@ -1,5 +1,6 @@
 @use "../settings/variables" as *;
 @use "../tools/mixins" as *;
+@use "../tools/functions" as *;
 
 .heading {
   font-size: $fs-sm-h1;
@@ -11,6 +12,7 @@
   @include responsive(desktop) {
     font-size: $fs-lg-h1;
     line-height: $lh-lg-h1;
+    text-wrap: wrap;
   }
 }
 
@@ -33,19 +35,27 @@
   font-weight: $fw-bold;
   line-height: $lh-sm-h1;
   color: $color-dark-blue;
-  margin-bottom: 8px;
+  margin-bottom: rem(8px);
 
   @include responsive(tablet) {
-    margin-bottom: 4px;
+    margin-bottom: rem(4px);
+  }
+
+  @include responsive(desktop-md) {
+    margin-bottom: rem(8px);
   }
 
   @include responsive(desktop) {
-    margin-bottom: 8px;
   }
 }
 
 .card__paragraph {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  text-wrap: wrap;
+
+  @include responsive(tablet) {
+    text-wrap: nowrap;
+  }
 
   &--dark {
     color: $color-dark-blue;
@@ -55,8 +65,11 @@
       margin-bottom: 1.5rem;
     }
 
-    @include responsive(desktop) {
+    @include responsive(desktop-md) {
       margin-bottom: 0;
+    }
+
+    @include responsive(desktop) {
     }
   }
 
@@ -65,14 +78,17 @@
     font-weight: $fw-bold;
     line-height: $lh-md;
     color: $color-dark-blue;
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
 
     @include responsive(tablet) {
       margin-bottom: 1rem;
     }
 
+    @include responsive(desktop-md) {
+      margin-bottom: rem(40px);
+    }
+
     @include responsive(desktop) {
-      margin-bottom: 40px;
     }
   }
 }
@@ -82,16 +98,62 @@
   mix-blend-mode: normal;
 }
 
-// .card__text2 {
-//   .mb {
-//     margin-bottom: 0;
+.countdown-heading {
+  text-transform: uppercase;
+  color: $color-white;
+  font-size: $fs-md-p;
+  font-weight: $fw-bold;
+  line-height: $lh-lg;
+  letter-spacing: $ls-sm;
+  margin-bottom: rem(18px);
 
-//     @include responsive(tablet) {
-//       margin-bottom: 1rem;
-//     }
+  @include responsive(tablet) {
+    margin-bottom: rem(8px);
+  }
 
-//     @include responsive(desktop) {
-//       margin-bottom: 0;
-//     }
-//   }
-// }
+  @include responsive(desktop) {
+    margin-bottom: 0;
+  }
+
+  &__span {
+    color: $color-blue;
+  }
+}
+
+.cd-heading-signup {
+  color: $color-dark-blue;
+}
+
+.countdown-numbers {
+  color: $color-white;
+  font-size: $fs-md-time;
+  line-height: $lh-count-sm;
+  font-weight: $fw-bold;
+
+  @include responsive(tablet) {
+    font-size: $fs-lg-h1;
+    line-height: 86%;
+  }
+}
+
+.numbers--blue {
+  color: $color-blue;
+}
+
+.countdown-units {
+  color: $color-white;
+  font-size: $fs-sm;
+  line-height: $lh-sm;
+  font-weight: $fw-bold;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+
+  @include responsive(tablet) {
+    font-size: $fs-md-p;
+    line-height: 175%;
+  }
+}
+
+.units--dark {
+  color: $color-dark-blue;
+}
