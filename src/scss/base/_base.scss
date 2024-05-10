@@ -5,6 +5,9 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
   background-color: $color-almost-white;
+}
+
+.body {
   background-image: url("/assets/home/bg-pattern-header.svg");
   background-repeat: no-repeat;
   background-position: left -4.5%;
@@ -17,5 +20,16 @@ body {
   @include responsive(desktop) {
     background-position: rem(656px) -66%;
     background-size: inherit;
+  }
+}
+
+.body-signup {
+  background-image: url("/assets/home/bg-pattern-header.svg");
+  background-repeat: no-repeat;
+  background-position: left -4.5%;
+  background-size: 100% auto;
+
+  @include responsive(tablet) {
+    background-image: none;
   }
 }

@@ -1,20 +1,35 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
   background-color: rgb(250, 250, 250);
+}
+
+.body {
   background-image: url("/bg-pattern-header.760e6eaa.svg");
   background-repeat: no-repeat;
   background-position: left -4.5%;
   background-size: 100% auto;
 }
 @media only screen and (min-width: 46.5625rem) {
-  body {
+  .body {
     background-position: 23.3125rem -15%;
   }
 }
 @media only screen and (min-width: 61.125rem) {
-  body {
+  .body {
     background-position: 41rem -66%;
     background-size: inherit;
+  }
+}
+
+.body-signup {
+  background-image: url("/bg-pattern-header.760e6eaa.svg");
+  background-repeat: no-repeat;
+  background-position: left -4.5%;
+  background-size: 100% auto;
+}
+@media only screen and (min-width: 46.5625rem) {
+  .body-signup {
+    background-image: none;
   }
 }
 
