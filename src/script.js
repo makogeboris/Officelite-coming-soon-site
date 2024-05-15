@@ -21,16 +21,33 @@ future.forEach((day) => {
   day.textContent = futureDate.format("DD MMM YYYY");
 });
 
-const daysFromDate = futureDate.diff(todayDate, "day");
-const hoursFromDate = futureDate.diff(todayDate, "hour");
+function updateCountdown() {
+  const remainingTime = dayjs.duration(futureDate.diff(dayjs()));
 
-console.log(daysFromDate);
-console.log(hoursFromDate);
+  const daysFromDate = Math.floor(remainingTime.asDays());
+  const hoursFromDate = remainingTime.hours();
+  const minutesFromDate = remainingTime.minutes();
+  const secondsFromDate = remainingTime.seconds();
 
-days.forEach((day) => {
-  day.textContent = daysFromDate;
-});
+  days.forEach((day) => {
+    day.textContent = daysFromDate;
+  });
 
-hours.forEach((hour) => {
-  hour.textContent = hoursFromDate;
-});
+  hours.forEach((hour) => {
+    hour.textContent = hoursFromDate;
+  });
+
+  minutes.forEach((min) => {
+    min.textContent = minutesFromDate;
+  });
+
+  seconds.forEach((sec) => {
+    sec.textContent = secondsFromDate;
+  });
+}
+
+// Update countdown every second
+setInterval(updateCountdown, 1000);
+
+// Initial update
+updateCountdown();

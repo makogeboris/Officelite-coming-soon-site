@@ -35,15 +35,18 @@
       background: $color-dark-blue;
       border-radius: 0.25rem;
       padding: rem(11px) rem(18px);
-      width: 100%;
+      width: rem(72px);
 
       &--light {
         background: $very-light-blue;
+        opacity: 0.9;
+        mix-blend-mode: normal;
       }
 
       @include responsive(tablet) {
         gap: 0.15625rem;
         padding: rem(16px) rem(18px);
+        width: rem(100px);
       }
     }
   }

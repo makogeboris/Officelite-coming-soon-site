@@ -145,16 +145,31 @@ var futureDate = todayDate.add(30, "day");
 future.forEach(function (day) {
   day.textContent = futureDate.format("DD MMM YYYY");
 });
-var daysFromDate = futureDate.diff(todayDate, "day");
-var hoursFromDate = futureDate.diff(todayDate, "hour");
-console.log(daysFromDate);
-console.log(hoursFromDate);
-days.forEach(function (day) {
-  day.textContent = daysFromDate;
-});
-hours.forEach(function (hour) {
-  hour.textContent = hoursFromDate;
-});
+function updateCountdown() {
+  var remainingTime = _dayjs.default.duration(futureDate.diff((0, _dayjs.default)()));
+  var daysFromDate = Math.floor(remainingTime.asDays());
+  var hoursFromDate = remainingTime.hours();
+  var minutesFromDate = remainingTime.minutes();
+  var secondsFromDate = remainingTime.seconds();
+  days.forEach(function (day) {
+    day.textContent = daysFromDate;
+  });
+  hours.forEach(function (hour) {
+    hour.textContent = hoursFromDate;
+  });
+  minutes.forEach(function (min) {
+    min.textContent = minutesFromDate;
+  });
+  seconds.forEach(function (sec) {
+    sec.textContent = secondsFromDate;
+  });
+}
+
+// Update countdown every second
+setInterval(updateCountdown, 1000);
+
+// Initial update
+updateCountdown();
 },{"dayjs":"../node_modules/dayjs/dayjs.min.js","dayjs/plugin/relativeTime":"../node_modules/dayjs/plugin/relativeTime.js","dayjs/plugin/duration":"../node_modules/dayjs/plugin/duration.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -180,7 +195,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "20149" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33475" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
