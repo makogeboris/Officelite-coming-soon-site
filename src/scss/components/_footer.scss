@@ -3,24 +3,28 @@
 @use "../tools/functions" as *;
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: $color-very-dark-blue;
   background-image: url("/assets/home/bg-pattern-footer.svg");
   background-position: top;
-
   padding: rem(894px) rem(24px) rem(100px);
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: rem(1110px);
+    margin: 0 auto;
+
+    @include responsive(desktop-md) {
+      flex-direction: row;
+      gap: rem(491px);
+    }
+  }
 
   @include responsive(tablet) {
     padding: rem(598px) rem(160px) rem(100px);
     background-position: center 220%;
-  }
-
-  @include responsive(desktop-md) {
-    flex-direction: row;
-    gap: rem(491px);
   }
 
   @include responsive(desktop) {

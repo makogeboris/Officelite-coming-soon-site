@@ -32,7 +32,8 @@
     flex-direction: row-reverse;
     align-items: flex-start;
     text-align: left;
-    margin-bottom: rem(140px);
+    max-width: rem(1110px);
+    margin: 0 auto rem(140px);
     gap: rem(63px);
     // padding: 0 rem(40px);
     padding: 0;
@@ -51,6 +52,7 @@
   @include responsive(desktop) {
     margin-bottom: rem(167px);
     gap: rem(95px);
+    justify-content: space-evenly;
 
     &__img-box {
       // width: 33%;

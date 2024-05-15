@@ -12,11 +12,8 @@
     justify-content: flex-start;
     padding-top: rem(72px);
     padding-left: rem(40px);
-    margin-bottom: rem(104px);
-  }
-
-  @include responsive(desktop-md) {
-    padding-left: rem(165px);
+    margin: 0 auto rem(104px);
+    max-width: rem(1110px);
   }
 
   @include responsive(desktop) {
@@ -27,8 +24,4 @@
 
 .header-signup {
   margin-bottom: 0;
-
-  @include responsive(desktop) {
-    padding-left: rem(165px);
-  }
 }

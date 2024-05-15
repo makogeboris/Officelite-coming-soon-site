@@ -402,25 +402,29 @@ textarea:not([rows]) {
 }
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: rgb(37, 41, 58);
   background-image: url("/bg-pattern-footer.cea8841c.svg");
   background-position: top;
   padding: 55.875rem 1.5rem 6.25rem;
 }
+.footer .footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 69.375rem;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 76.875rem) {
+  .footer .footer-wrapper {
+    flex-direction: row;
+    gap: 30.6875rem;
+  }
+}
 @media only screen and (min-width: 46.5625rem) {
   .footer {
     padding: 37.375rem 10rem 6.25rem;
     background-position: center 220%;
-  }
-}
-@media only screen and (min-width: 76.875rem) {
-  .footer {
-    flex-direction: row;
-    gap: 30.6875rem;
   }
 }
 @media only screen and (min-width: 61.125rem) {
@@ -668,12 +672,8 @@ textarea:not([rows]) {
     justify-content: flex-start;
     padding-top: 4.5rem;
     padding-left: 2.5rem;
-    margin-bottom: 6.5rem;
-  }
-}
-@media only screen and (min-width: 76.875rem) {
-  .header {
-    padding-left: 10.3125rem;
+    margin: 0 auto 6.5rem;
+    max-width: 69.375rem;
   }
 }
 @media only screen and (min-width: 61.125rem) {
@@ -685,11 +685,6 @@ textarea:not([rows]) {
 
 .header-signup {
   margin-bottom: 0;
-}
-@media only screen and (min-width: 61.125rem) {
-  .header-signup {
-    padding-left: 10.3125rem;
-  }
 }
 
 .content {
@@ -721,7 +716,8 @@ textarea:not([rows]) {
     flex-direction: row-reverse;
     align-items: flex-start;
     text-align: left;
-    margin-bottom: 8.75rem;
+    max-width: 69.375rem;
+    margin: 0 auto 8.75rem;
     gap: 3.9375rem;
     padding: 0;
   }
@@ -736,6 +732,7 @@ textarea:not([rows]) {
   .content {
     margin-bottom: 10.4375rem;
     gap: 5.9375rem;
+    justify-content: space-evenly;
   }
   .content__img-box {
     max-width: 29.6875rem;
@@ -761,8 +758,9 @@ textarea:not([rows]) {
     flex-direction: row;
     justify-content: center;
     gap: 7.8125rem;
-    padding-bottom: 17.5rem;
-    padding-top: 9.625rem;
+    padding: 9.625rem 2.5rem 17.5rem;
+    max-width: 69.375rem;
+    margin: 0 auto;
   }
 }
 .wrapper__container {
