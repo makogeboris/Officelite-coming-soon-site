@@ -584,7 +584,6 @@ textarea:not([rows]) {
   padding: 2.5rem 3.3125rem;
   max-width: 21.875rem;
   width: 100%;
-  height: -webkit-fill-available;
 }
 .section-pricing .card-container .card--white {
   background-color: rgb(255, 255, 255);
