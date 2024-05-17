@@ -2,10 +2,8 @@
 
 import dayjs from "dayjs";
 
-const relativeTime = require("dayjs/plugin/relativeTime");
 const duration = require("dayjs/plugin/duration");
 
-dayjs.extend(relativeTime);
 dayjs.extend(duration);
 
 const future = document.querySelectorAll(".countdown-heading__span");
@@ -46,8 +44,6 @@ function updateCountdown() {
   });
 }
 
-// Update countdown every second
 setInterval(updateCountdown, 1000);
 
-// Initial update
 updateCountdown();
