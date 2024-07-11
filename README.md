@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](/design/Desktop%20-%20Home.jpg)
+![](/design/preview.jpg)
 
 ### Links
 
@@ -40,14 +40,15 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- SASS
-- Parcel
-- DayJS
+- **Semantic HTML5 markup** - Structured the content of the web page using meaningful and descriptive tags.
+- **CSS custom properties** - Utilized for defining reusable variables for colors, fonts, and other styles.
+- **JavaScript** - Implemented dynamic behavior and interactive features.
+- **Flexbox** - Used for aligning and distributing space among items in a container.
+- **CSS Grid** - Employed for creating complex layouts with a grid-based design.
+- **Mobile-first workflow** - Ensured the design and development prioritized mobile user experience.
+- **SASS** - Leveraged for writing cleaner and more maintainable CSS using variables, nesting, and mixins.
+- **Parcel** - Used for bundling and building the project assets.
+- **DayJS** - Integrated for handling and manipulating dates and times in JavaScript.
 
 ### What I learned
 
