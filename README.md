@@ -40,21 +40,18 @@ Users should be able to:
 
 ### Built with
 
-- **Semantic HTML5 markup** - Structured the content of the web page using meaningful and descriptive tags.
-- **CSS custom properties** - Utilized for defining reusable variables for colors, fonts, and other styles.
-- **JavaScript** - Implemented dynamic behavior and interactive features.
-- **Flexbox** - Used for aligning and distributing space among items in a container.
-- **CSS Grid** - Employed for creating complex layouts with a grid-based design.
-- **Mobile-first workflow** - Ensured the design and development prioritized mobile user experience.
-- **SASS** - Leveraged for writing cleaner and more maintainable CSS using variables, nesting, and mixins.
-- **Parcel** - Used for bundling and building the project assets.
-- **DayJS** - Integrated for handling and manipulating dates and times in JavaScript.
+- Semantic HTML5 markup
+- CSS custom properties
+- Mobile-first workflow
+- SASS
+- DayJS
+- Parcel
 
 ### What I learned
 
-- Another opportunity to get to work with the `Date` object, this time I learned how to use the DayJS library to implement the countdown component. I find it really helpful and quite easy to understand and work with as compared with vanilla JavaScript.
+Another opportunity to get to work with the `Date` object, this time I learned how to use the DayJS library to implement the countdown component. I find it really helpful and quite easy to understand and work with as compared with vanilla JavaScript.
 
-- My second project using Sass and I'm getting used to it and improving, also learned how to use an easy function to convert px values to rem
+My second project using Sass and I'm getting used to it and improving, also learned how to use an easy function to convert px values to rem
 
 ```scss
 @use "sass:math";
