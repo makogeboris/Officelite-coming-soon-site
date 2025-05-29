@@ -6,7 +6,6 @@
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
@@ -33,10 +32,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/mkboris/Officelite-coming-soon-site)
 - [Live Site URL](https://officelite-coming-soon-site-brown.vercel.app/)
-
-## My process
 
 ### Built with
 
@@ -72,4 +68,5 @@ Working with dates and time can be really tricky, I will continue to get more ha
 
 ## Author
 
-- Frontend Mentor - [@mkboris](https://www.frontendmentor.io/profile/mkboris)
+- Frontend Mentor - [makogeboris](https://www.frontendmentor.io/profile/makogeboris)
+- Twitter - [makogeboris](https://x.com/makogeboris)
